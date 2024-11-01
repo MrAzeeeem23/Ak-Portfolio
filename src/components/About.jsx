@@ -7,7 +7,7 @@ function About() {
   return (
     <>
       <BackNav />
-      <div className="bg-white text-black h-full md:px-40 px-5 py-10 md:flex flex-row">
+      <div className="bg-white text-black h-full md:px-40 px-5 py-10 md:flex flex-row  dark:bg-gray-950 dark:text-white">
         <div className="mb-10 md:w-[50%] w-full">
           <h1 className="text-8xl mb-10 font-Italiana">About</h1>
           <h2 className="text-2xl heading">

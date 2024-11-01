@@ -15,7 +15,7 @@ function Projects() {
   return (
     <>
       <BackNav />
-      <div className='bg-white text-black w-full h-auto p-2 md:p-8 lg:px-20'>
+      <div className='bg-white text-black w-full h-auto p-2 md:p-8 lg:px-20  dark:bg-gray-800 dark:text-white'>
         <div className='m-4 md:m-10'>
           <h1 className='text-7xl md:text-7xl lg:text-8xl font-Italiana'>Projects</h1>
         </div>

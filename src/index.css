@@ -9,6 +9,10 @@
   background-color: rgb(0, 0, 0);
 }
 
+*{
+  transition: 250ms;
+}
+
 body {
   background-color: black;
   color: white;

@@ -27,7 +27,7 @@ function Contact() {
   return (
     <>
       <BackNav />
-      <div className="w-full bg-white text-black flex flex-col justify-between">
+      <div className="w-full bg-white text-black flex flex-col justify-between  dark:bg-gray-950 dark:text-white">
         <div className="m-5 pt-2 sm:m-10">
           <h1 className="text-7xl sm:text-7xl lg:text-7xl font-Italiana">Contact us</h1>
         </div>
@@ -58,7 +58,7 @@ function Contact() {
           </div>
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col w-full max-w-lg p-4 bg-gray-300 shadow-md rounded-lg"
+            className="flex flex-col w-full max-w-lg p-4 bg-gray-300 shadow-md rounded-lg  dark:bg-gray-800 dark:text-white"
           >
             <label htmlFor="fullName" className="text-lg sm:text-xl font-Playfair_Display">
               FullName
@@ -69,7 +69,7 @@ function Contact() {
               required
               placeholder="Enter your Full name"
               onChange={(e) => setFullName(e.target.value)}
-              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base"
+              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base dark:bg-gray-900"
             />
             <label htmlFor="email" className="text-lg sm:text-xl font-Playfair_Display">
               Email
@@ -80,7 +80,7 @@ function Contact() {
               required
               placeholder="Enter your email"
               onChange={(e) => setEmail(e.target.value)}
-              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base"
+              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base dark:bg-gray-900"
             />
 
             <label htmlFor="message" className="text-lg sm:text-xl font-Playfair_Display">
@@ -93,7 +93,7 @@ function Contact() {
               value={compose}
               required
               onChange={(e) => setCompose(e.target.value)}
-              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base"
+              className="border-none p-2 rounded-lg mb-4 mt-2 outline-none text-base dark:bg-gray-900"
             ></textarea>
 
             <button
