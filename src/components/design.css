@@ -1,0 +1,33 @@
+.LinkStyle:hover{
+    font-style: italic;
+    overflow: hidden;
+    transform: translateX(10px);
+    transition: 100ms ease-in;
+    color: rgb(153 27 27);
+}
+
+.LinkStyle{
+    font-family: "Italiana", sans-serif;
+    line-height: 6vw;
+    font-style: normal;
+    transform: translateX(0px);
+    transition: 100ms ease-out;
+}
+
+.linktext{
+    padding: 10px;
+    font-size: 8vw;
+}
+
+@media (max-width: 600px) {
+    .linktext{
+        padding: 10px;
+        font-size: 12vw;
+    }
+}
+
+.heading{
+    font-family: "Playfair Display", serif;
+}
+
+
