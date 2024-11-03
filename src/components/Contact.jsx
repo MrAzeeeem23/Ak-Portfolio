@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import BackNav from "../props/BackNav.jsx";
+
+import gsap from 'gsap';
+import { animationFedeIn, staggeredFadeIn } from '../utility/animation.js'
+import { useGSAP } from '@gsap/react'
 
 function Contact() {
   const [fullName, setFullName] = useState("");
@@ -24,8 +28,17 @@ function Contact() {
     }
   };
 
+  // _________________________GSAP
+
+  const container = useRef();
+
+  useGSAP(() => {
+    animationFedeIn(container.current)
+    staggeredFadeIn('.innerbox div')
+  })
+  
   return (
-    <>
+    <div ref={container} className='innerbox'>
       <BackNav />
       <div className="w-full bg-white text-black flex flex-col justify-between  dark:bg-gray-950 dark:text-white">
         <div className="m-5 pt-2 sm:m-10">
@@ -110,7 +123,7 @@ function Contact() {
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

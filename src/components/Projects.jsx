@@ -1,7 +1,12 @@
-import React from 'react'
+import React, { useRef } from "react";
 import BackNav from '../props/BackNav.jsx'
 import ProjectCard from '../props/ProjectCard.jsx'
 import './design.css'
+
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react'
+import { animationFedeIn, staggeredFadeIn } from '../utility/animation.js'
+
 
 const projects = [{
   name: "SP-Project-E-Commerce",
@@ -12,14 +17,22 @@ const projects = [{
 ]
 
 function Projects() {
+
+  const container = useRef();
+
+  useGSAP(() => {
+    animationFedeIn(container.current)
+    staggeredFadeIn('.innerbox .apper')
+  })
+
   return (
-    <>
+    <div ref={container} className='innerbox'>
       <BackNav />
-      <div className='bg-white text-black w-full h-auto p-2 md:p-8 lg:px-20  dark:bg-gray-800 dark:text-white'>
-        <div className='m-4 md:m-10'>
+      <div className='apper bg-white text-black w-full h-auto p-2 md:p-8 lg:px-20  dark:bg-gray-800 dark:text-white'>
+        <div className='apper m-4 md:m-10'>
           <h1 className='text-7xl md:text-7xl lg:text-8xl font-Italiana'>Projects</h1>
         </div>
-        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4">
+        <div className="apper grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-4">
           {
             projects.map((project, index) => (
               <ProjectCard project={project} key={index} />
@@ -27,7 +40,7 @@ function Projects() {
           }
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import BackNav from "../props/BackNav.jsx";
 import "./design.css";
 import img from "../assets/it's ak.jpg";
 
+import gsap from 'gsap';
+import { animationFedeIn, staggeredFadeIn } from '../utility/animation.js'
+import { useGSAP } from '@gsap/react'
+
 function About() {
+
+  const container = useRef();
+
+  useGSAP(() => {
+    animationFedeIn(container.current)
+    staggeredFadeIn('.innerbox div',)
+  })
+
   return (
-    <>
+    <div ref={container}  className="innerbox">
       <BackNav />
       <div className="bg-white text-black h-full md:px-40 px-5 py-10 md:flex flex-row  dark:bg-gray-950 dark:text-white">
         <div className="mb-10 md:w-[50%] w-full">
@@ -15,7 +27,7 @@ function About() {
             dynamic, responsive, and user-centered applications using modern
             technologies."
           </h2>
-          <p className="mt-10">
+          <p className="apper mt-10">
             Hello! I’m Pathan Azeemkhan Majidkhan, a passionate full-stack
             developer currently pursuing my Bachelor’s in Computer Applications
             (BCA) at Ajeenkya DY Patil University through Sunstone. With a solid
@@ -41,7 +53,7 @@ function About() {
           <img src={img} alt="image" className="w-[17rem] ml-32" />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
