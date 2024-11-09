@@ -40,9 +40,9 @@ function Contact() {
   return (
     <div ref={container} className='innerbox'>
       <BackNav />
-      <div className="w-full bg-white text-black flex flex-col justify-between  dark:bg-gray-950 dark:text-white">
+      <div className="w-full bg-white text-black flex flex-col justify-between dark:bg-gray-950 dark:text-white">
         <div className="m-5 pt-2 sm:m-10">
-          <h1 className="text-7xl sm:text-7xl lg:text-7xl font-Italiana">Contact us</h1>
+          <h1 className="text-7xl sm:text-7xl lg:text-7xl font-Italiana">Contact Me.</h1>
         </div>
         <div className="m-5 sm:m-10 flex flex-col lg:flex-row lg:justify-around ">
           <div className="mt-10 lg:mt-20 mb-10 lg:mb-20">
@@ -71,8 +71,9 @@ function Contact() {
           </div>
           <form
             onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col w-full max-w-lg p-4 bg-gray-300 shadow-md rounded-lg  dark:bg-gray-800 dark:text-white"
-          >
+            className="flex flex-col w-full max-w-lg p-4 bg-gray-300 shadow-md rounded-2xl  dark:bg-gray-800 dark:text-white"
+          > 
+          <h1 className="text-3xl font-Italiana my-4 text-red-800">Get in touch</h1>
             <label htmlFor="fullName" className="text-lg sm:text-xl font-Playfair_Display">
               FullName
             </label>
@@ -111,7 +112,7 @@ function Contact() {
 
             <button
               onClick={handleSubmit}
-              className="bg-red-800 p-3 rounded-lg hover:bg-red-600 transition-all"
+              className="bg-red-800 p-3 rounded-2xl hover:bg-red-600 transition-all"
             >
               <a
                 href={handleMailtoLink()}

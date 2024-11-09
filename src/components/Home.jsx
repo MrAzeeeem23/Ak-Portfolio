@@ -26,6 +26,7 @@ function Home() {
               alt="logo"
               className="w-12 rounded-full md:-rotate-90"
             />
+            <hr className="w-40 md:-rotate-90 text-white"/>
             <div className="[&>*]:px-2 text-2xl flex md:-rotate-90 md:mt-12">
               <a href="https://www.linkedin.com/in/azeem-khan62?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target={"_blank"}>
                 <i class="bi bi-linkedin"></i>
@@ -41,7 +42,7 @@ function Home() {
         <div className="bg-white text-black col-span-1 md:col-span-4 flex items-center p-5 dark:bg-gray-950 dark:text-white">
           <div className="mt-10 md:mt-20">
             <h1 className="text-4xl mb-2">AzeemKhan</h1>
-            <h1 className="text-xl text-gray-700">Software Developer</h1>
+            <h1 className="text-xl text-red-700 ">Software Developer</h1>
             <br />
             <p className="text-gray-400">
               "I’m Azeem Khan, a passionate developer dedicated to crafting
